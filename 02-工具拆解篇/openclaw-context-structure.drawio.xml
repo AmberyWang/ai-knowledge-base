@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-03-12T03:30:00.000Z" agent="OpenClaw" etag="openclaw-context-v1" version="24.2.2" type="device">
+  <diagram id="OpenClawContext" name="OpenClaw Context Structure">
+    <mxGraphModel dx="1837" dy="1865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 标题 -->
+        <mxCell id="2" value="OpenClaw 上下文结构树" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="-110" width="400" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- 根节点 -->
+        <mxCell id="root" value="OpenClaw Context" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="520" y="0" width="160" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 第一层：三大主要部分 -->
+        <mxCell id="system-prompt" value="❄️ System Prompt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="120" width="180" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="conversation" value="Messages History&#xa;🔄 部分可压缩" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="510" y="120" width="180" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="inbound" value="❄️ Inbound Context" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="920" y="120" width="180" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接根节点到三大部分 -->
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="root" target="system-prompt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="root" target="conversation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="root" target="inbound">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- System Prompt 子节点 -->
+        <mxCell id="sp-tooling" value="Tooling" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="240" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sp-skills" value="Skills List 🟦" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="240" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sp-project" value="Project Context 🟦" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="180" y="240" width="140" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sp-runtime" value="Runtime Metadata" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="240" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接 System Prompt 到子节点 -->
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="system-prompt" target="sp-tooling">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="system-prompt" target="sp-skills">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="system-prompt" target="sp-project">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="system-prompt" target="sp-runtime">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Tooling 子节点 -->
+        <mxCell id="tool-list" value="Tool List" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="340" width="90" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tool-schema" value="Tool Schemas (JSON)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="340" width="130" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sp-tooling" target="tool-list">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sp-tooling" target="tool-schema">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Skills List 子节点 -->
+        <mxCell id="skill-meta" value="Skills Metadata&#xa;(name/desc/location)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="140" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sp-skills" target="skill-meta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Project Context 子节点 -->
+        <mxCell id="pc-agents" value="AGENTS.md 🟦" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="110" y="340" width="100" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pc-soul" value="SOUL.md 🟦" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="220" y="340" width="100" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pc-tools" value="TOOLS.md 🟦" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="330" y="340" width="100" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pc-more" value="USER.md&#xa;IDENTITY.md&#xa;HEARTBEAT.md&#xa;MEMORY.md (主会话)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="190" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sp-project" target="pc-agents">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sp-project" target="pc-soul">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sp-project" target="pc-tools">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sp-project" target="pc-more">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Runtime Metadata 子节点 -->
+        <mxCell id="rt-info" value="host/OS/model&#xa;thinking/reasoning&#xa;timezone" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="335" y="340" width="120" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sp-runtime" target="rt-info">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Messages History 子节点 -->
+        <mxCell id="msg-user" value="❄️ User Messages" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="420" y="240" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg-assistant" value="Assistant Messages 🔥" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="560" y="240" width="150" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg-tool" value="Tool Calls + Results" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="240" width="140" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="conversation" target="msg-user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="conversation" target="msg-assistant">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="conversation" target="msg-tool">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Tool Calls 子节点 -->
+        <mxCell id="tool-input" value="❄️ Tool Input" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="680" y="340" width="100" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tool-output" value="Tool Output 🔥" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="790" y="340" width="110" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="msg-tool" target="tool-input">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="msg-tool" target="tool-output">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Tool Output 细分 -->
+        <mxCell id="output-memory" value="memory_search 输出 ⭐" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="750" y="390" width="120" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="output-other" value="其他工具输出 🔥" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="880" y="390" width="110" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tool-output" target="output-memory">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tool-output" target="output-other">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Inbound Context 子节点 -->
+        <mxCell id="ib-meta" value="Metadata&#xa;(channel/provider/chat_type)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="880" y="240" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ib-sender" value="Sender Info&#xa;(untrusted)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="240" width="100" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="inbound" target="ib-meta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="inbound" target="ib-sender">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 图例 -->
+        <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="-60" width="250" height="140" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-title" value="图例" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="50" y="-55" width="250" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-frozen" value="❄️ 永不压缩" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="-30" width="100" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-compress" value="🔥 可压缩" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-30" width="120" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-protected" value="⭐ 特殊保护" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="5" width="100" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-custom" value="🟦 可自定义" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="170" y="5" width="120" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-internal" value="⬜ 内部组件" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="110" y="40" width="100" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- 压缩规则说明 -->
+        <mxCell id="compress-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="-60" width="280" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="compress-title" value="压缩规则说明" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="350" y="-55" width="280" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="compress-frozen-title" value="❄️ 不可压缩（必须完整保留）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="-25" width="250" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="compress-frozen-detail" value="• System Prompt 全部内容&#xa;• Tool Schemas (JSON)&#xa;• User Messages&#xa;• Tool Inputs" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="360" y="-5" width="250" height="55" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="compress-hot-title" value="🔥 可压缩（超出限制时）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="360" y="55" width="250" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="compress-hot-detail" value="• Assistant Messages (被摘要替代)&#xa;• Tool Outputs (旧内容被修剪)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="360" y="75" width="250" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="compress-protected-title" value="⭐ 特殊保护" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="360" y="115" width="250" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="compress-protected-detail" value="• memory_search 输出永不修剪&#xa;  (保持记忆检索结果完整性)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="360" y="135" width="250" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- 注释：memory/*.md 不自动注入 -->
+        <mxCell id="note-memory" value="⚠️ memory/YYYY-MM-DD.md&#xa;不自动注入，需通过&#xa;memory_search/memory_get&#xa;按需加载" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="190" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#d6b656;" edge="1" parent="1" source="pc-more" target="note-memory">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
